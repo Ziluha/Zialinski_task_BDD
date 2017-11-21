@@ -97,6 +97,7 @@
   <ItemGroup>
     <Folder Include="ErrorScreenshots\" />
     <Folder Include="Reports\" />
+    <Folder Include="SpecFlowFeatures\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="extent-config.xml">
