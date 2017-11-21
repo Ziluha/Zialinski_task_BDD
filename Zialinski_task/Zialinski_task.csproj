@@ -79,9 +79,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportSettings\BaseReport.cs" />
     <Compile Include="ReportSettings\GetScreenshot.cs" />
+    <Compile Include="SpecFlowFeatures\GmailAuthorization.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GmailAuthorization.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SpecFlowSteps\GmailAuthorizationSteps.cs" />
     <Compile Include="TestCases\GmailDraftTest.cs" />
     <Compile Include="TestCases\GmailAuthorizationTest.cs" />
-    <Compile Include="TestCases\GmailFailCheck.cs" />
+    <Compile Include="TestCases\GmailFailCheckTest.cs" />
     <Compile Include="TestSettings\BaseTest.cs" />
     <Compile Include="WrapperFactory\BrowserFactory.cs" />
   </ItemGroup>
@@ -93,11 +99,14 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="SpecFlowFeatures\GmailAuthorization.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GmailAuthorization.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ErrorScreenshots\" />
     <Folder Include="Reports\" />
-    <Folder Include="SpecFlowFeatures\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="extent-config.xml">
