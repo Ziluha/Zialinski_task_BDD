@@ -7,19 +7,16 @@ using Zialinski_task.TestSettings;
 
 namespace Zialinski_task.TestCases
 {
-    class GmailFailCheckTest : BaseTest
+    class GmailFailCheckTest
     {
         private const string TestName = "GmailFailCheckTest";
-        public GmailFailCheckTest() : base(Browser.Name.Chrome, TestName) { }
 
         [NUnit.Framework.Test]
         public void FailReportCheckTest()
         {
-            Test = Extent.CreateTest(TestName);
             Page.GmailLogin.InputLogin(ConfigurationManager.AppSettings["InvalidLogin"]);
             Page.GmailLogin.SubmitLogin();
-            Assert.True(Page.GmailPassword.IsLoginApplied(Driver), "Password page is not opened");
-            Test.Pass("Fail check is succeed");
+            Assert.True(Page.GmailPassword.IsLoginApplied(BaseTest.Driver), "Password page is not opened");
         }
     }
 }

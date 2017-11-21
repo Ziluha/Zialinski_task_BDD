@@ -84,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GmailAuthorization.feature</DependentUpon>
     </Compile>
+    <Compile Include="SpecFlowHooks\TestFixture.cs" />
     <Compile Include="SpecFlowSteps\GmailAuthorizationSteps.cs" />
     <Compile Include="TestCases\GmailDraftTest.cs" />
     <Compile Include="TestCases\GmailAuthorizationTest.cs" />

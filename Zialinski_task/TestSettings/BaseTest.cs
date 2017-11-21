@@ -8,53 +8,47 @@ using Zialinski_task.WrapperFactory;
 
 namespace Zialinski_task.TestSettings
 {
-    [TestFixture]
-    public class BaseTest : BaseReport
+    public static class BaseTest
     {
-        protected IWebDriver Driver { get; set; }
-        private readonly Browser.Name _browserName;
-        private readonly BrowserFactory _browserFactory;
-        private readonly string _testName;
+        public static IWebDriver Driver { get; set; }
+        public static Browser.Name BrowserName;
+        public static string TestName;
 
-        public BaseTest(Browser.Name browserName, string testName)
+        /*public BaseTest(Browser.Name browserName, string testName)
         {
-            _browserName = browserName;
-            _browserFactory = BrowserFactory.GetInstance();
-            _testName = testName;
-        }
+            BrowserName = browserName;
+            BrowserFactory = BrowserFactory.GetInstance();
+            TestName = testName;
+        }*/
 
-        public void ChooseDriverInstance(Browser.Name browserName)
+        private static void ChooseDriverInstance(Browser.Name browserName)
         {
             if (browserName == Browser.Name.Chrome)
-                Driver = _browserFactory.InitBrowser(Browser.Name.Chrome);
+                Driver = BrowserFactory.GetInstance().InitBrowser(Browser.Name.Chrome);
             else if (browserName == Browser.Name.Firefox)
-                Driver = _browserFactory.InitBrowser(Browser.Name.Firefox);
+                Driver = BrowserFactory.GetInstance().InitBrowser(Browser.Name.Firefox);
         }
-
-        [OneTimeSetUp]
-        public void InitReport()
+        
+        public static void InitReport()
         {
-            StartReport(_testName);
+            BaseReport.StartReport(TestName);
         }
-
-        [SetUp]
-        public void Init()
+        
+        public static void Init()
         {
-            ChooseDriverInstance(_browserName);
+            ChooseDriverInstance(BrowserName);
             DriverConfiguration.LoadApp(Driver, ConfigurationManager.AppSettings["GmailURL"]);
         }
-
-        [TearDown]
-        public void EndTest()
+        
+        public static void EndTest()
         {
-            GetResult(_testName);
-            _browserFactory.CloseAllDrivers();
+            BaseReport.GetResult(TestName);
+            BrowserFactory.GetInstance().CloseAllDrivers();
         }
 
-        [OneTimeTearDown]
-        public void EndReport()
+        public static void EndReport()
         {
-            StopReport();
+            BaseReport.StopReport();
         }
     }
 }

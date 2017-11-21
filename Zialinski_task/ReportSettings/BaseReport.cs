@@ -6,13 +6,13 @@ using Zialinski_task.WrapperFactory;
 
 namespace Zialinski_task.ReportSettings
 {
-    public class BaseReport
+    public static class BaseReport
     {
-        protected static ExtentReports Extent;
-        protected static ExtentTest Test;
+        public static ExtentReports Extent;
+        public static ExtentTest Test;
         private static ExtentHtmlReporter _htmlReporter;
         
-        public void StartReport(string testName)
+        public static void StartReport(string testName)
         {
             string extentConfigName = "extent-config.xml";
             string binPath = ProjectPathes.GetBinPath();
@@ -28,7 +28,7 @@ namespace Zialinski_task.ReportSettings
             Extent.AddSystemInfo("By", "Zialinski Ivan");
         }
         
-         public void GetResult(string testName)
+         public static void GetResult(string testName)
          {
              var status = TestContext.CurrentContext.Result.Outcome.Status;
              var stackTrace = "<pre>" + TestContext.CurrentContext.Result.StackTrace + "</pre>";
@@ -43,7 +43,7 @@ namespace Zialinski_task.ReportSettings
              Test = null;
          }
         
-        public void StopReport()
+        public static void StopReport()
         {
             Extent.Flush();
             Extent.RemoveTest(Test);
