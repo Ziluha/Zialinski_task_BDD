@@ -2,7 +2,6 @@
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
-using TechTalk.SpecFlow;
 using Zialinski_task.Pathes;
 using Zialinski_task.WrapperFactory;
 
@@ -34,7 +33,6 @@ namespace Zialinski_task.ReportSettings
         public static void GetResult(string testName)
         {
             var status = TestContext.CurrentContext.Result.Outcome.Status;
-            var stackTrace = "<pre>" + TestContext.CurrentContext.Result.StackTrace + "</pre>";
             var errorMessage = TestContext.CurrentContext.Result.Message;
 
             if (status == NUnit.Framework.Interfaces.TestStatus.Failed)
@@ -43,7 +41,7 @@ namespace Zialinski_task.ReportSettings
                 Scenario.CreateNode<Then>(errorMessage).Fail("fail");
                 Test.CreateNode<And>("Snapshot below: " + Test.AddScreenCaptureFromPath(screenshotPath)).Fail("fail");
             }
-            Test = null;
+            Scenario = null;
         }
         
         public static void StopReport()

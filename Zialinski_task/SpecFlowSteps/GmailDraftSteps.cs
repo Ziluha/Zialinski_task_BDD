@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 using Zialinski_task.PageObjects;
-using Zialinski_task.ReportSettings;
 using Zialinski_task.TestSettings;
 
 namespace Zialinski_task.SpecFlowSteps
@@ -14,7 +10,8 @@ namespace Zialinski_task.SpecFlowSteps
     [Binding]
     public sealed class GmailDraftSteps
     {
-        private int countOfDraftsAtStart;
+        private int _countOfDraftsAtStart;
+
         [Given(@"I have opened Gmail on Login Page and authorized with valid data\. Inbox Page is opened")]
         public void GivenIHaveOpenedGmailOnLoginPageAndAuthorizedWithValidData_InboxPageIsOpened()
         {
@@ -22,7 +19,6 @@ namespace Zialinski_task.SpecFlowSteps
             Page.GmailLogin.SubmitLogin();
             Page.GmailPassword.InputPassword(ConfigurationManager.AppSettings["ValidPassword"], BaseTest.Driver);
             Page.GmailPassword.SubmitPassword();
-            BaseReport.Test = BaseReport.Extent.CreateTest(ScenarioContext.Current.ScenarioInfo.Title);
             Console.WriteLine("App is opened");
         }
         
@@ -66,13 +62,12 @@ namespace Zialinski_task.SpecFlowSteps
         [Then(@"Message successfully added in drafts")]
         public void ThenMessageSuccessfullyAddedInDrafts()
         {
-            BaseReport.Test.Pass("Message successfully added in drafts");
         }
 
         [When(@"I choose first Draft")]
         public void WhenIChooseFirstDraft()
         {
-            countOfDraftsAtStart = Page.GmailDrafts.GetCountOfDrafts();
+            _countOfDraftsAtStart = Page.GmailDrafts.GetCountOfDrafts();
             Page.GmailDrafts.ChooseFirstDraft();
         }
 
@@ -85,14 +80,13 @@ namespace Zialinski_task.SpecFlowSteps
         [When(@"Count of Drafts equals count of Drafts at start minus (.*)")]
         public void WhenCountOfDraftsEqualsCountOfDraftsAtStartMinus(int p0)
         {
-            Assert.AreEqual(countOfDraftsAtStart - 1, Page.GmailDrafts.GetCountOfDrafts(),
+            Assert.AreEqual(_countOfDraftsAtStart - 1, Page.GmailDrafts.GetCountOfDrafts(),
                 "Count of drafts at start and afted discarding doesn't match");
         }
 
         [Then(@"Draft successfully deleted")]
         public void ThenDraftSuccessfullyDeleted()
         {
-            BaseReport.Test.Pass("Message successfully deleted from Drafts");
         }
 
 

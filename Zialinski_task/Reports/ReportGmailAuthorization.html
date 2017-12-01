@@ -18,7 +18,7 @@
     
 
 
-	<body class='extent standard default hide-overflow '>
+	<body class='extent standard default hide-overflow bdd'>
 		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
 			<span><i class='material-icons'>desktop_windows</i></span>
 		</div>
@@ -43,7 +43,7 @@
         <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 
             <a>
-                <span class='suite-start-time label blue darken-3'>12/1/2017 1:59:44 PM Russia TZ 2 Standard Time</span>
+                <span class='suite-start-time label blue darken-3'>12/1/2017 5:09:37 PM Russia TZ 2 Standard Time</span>
             </a>
             <a>
                 <span class="label blue darken-3">v3.0.2</span>
@@ -116,14 +116,14 @@
 
 <div id='test-view-charts' class='subview-full'>
     <div id='charts-row' class='row nm-v nm-h'>
-        <div class='col s12 m6 l6 np-h'>
+        <div class='col s12 m4 l4 np-h'>
             <div class='card-panel nm-v'>
-                <div class='left panel-name'>Tests</div>
+                <div class='left panel-name'>Features</div>
                 <div class='chart-box'>
                     <canvas id='parent-analysis' width='100' height='80'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span><span class='strong'>3</span> test(s) passed</span>
+                    <span><span class='strong'>1</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
@@ -131,21 +131,35 @@
             </div>
         </div>
 
-            <div class='col s12 m6 l6 np-h'>
+            <div class='col s12 m4 l4 np-h'>
                 <div class='card-panel nm-v'>
-                    <div class='left panel-name'>Steps</div>
+                    <div class='left panel-name'>Scenarios</div>
                     <div class='chart-box'>
                         <canvas id='child-analysis' width='100' height='80'></canvas>
                     </div>
                     <div class='block text-small'>
-                        <span><span class='strong'>3</span> step(s) passed</span>
+                        <span><span class='strong'>1</span> step(s) passed</span>
                     </div>
                     <div class='block text-small'>
-                        <span class='strong'>0</span> step(s) failed, <span class='strong'>36</span> others
+                        <span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
                     </div>
                 </div>
             </div>
 
+            <div class='col s12 m4 l4 np-h'>
+                <div class='card-panel nm-v'>
+                    <div class='left panel-name'>Steps</div>
+                    <div class='chart-box'>
+                        <canvas id='grandchild-analysis' width='100' height='80'></canvas>
+                    </div>
+                    <div class='block text-small'>
+                        <span><span class='strong'>4</span> step(s) passed</span>
+                    </div>
+                    <div class='block text-small'>
+                        <span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
     <div class='subview-left left'>
@@ -156,511 +170,43 @@
             <ul id='test-collection' class='test-collection'>
 
 
-                    <li class='test displayed active  pass' status='pass' test-id='1'>
+                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='1'>
                         <div class='test-heading'>
                             <span class='test-name'>Authorization With Invalid Login</span>
-                            <span class='test-time'>12/1/2017 1:59:50 PM</span>
+                            <span class='test-time'>12/1/2017 5:09:44 PM</span>
                             <span class='test-status right pass'>Pass</span>
                         </div>
                         <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>12/1/2017 1:59:50 PM</span>
-                                    <span class='label end-time'>12/1/2017 1:59:51 PM</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:01.2048444</span>
-                                </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:50 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:50 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:50 PM</td>
-                                                        <td class='step-details'>Try to click element</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element value before changing:</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element value after changing: test.invalid.zel</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Try to click element NEXT</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Finding element By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element is founded By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Finding element By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>Element is founded By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:51 PM</td>
-                                                        <td class='step-details'>User is not authorized with invalid login</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <div class='scenario node' test-id='2' status='pass'>
+                                        <span class='scenario-duration right label'>00:00:01.4894271</span>
+                                        <div class='scenario-desc'>
+                                            <b>Scenario</b>
+                                            Authorization With Invalid Login
 
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='2'>
-                        <div class='test-heading'>
-                            <span class='test-name'>Authorization With Invalid Password</span>
-                            <span class='test-time'>12/1/2017 1:59:58 PM</span>
-                            <span class='test-status right pass'>Pass</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>12/1/2017 1:59:58 PM</span>
-                                    <span class='label end-time'>12/1/2017 2:00:00 PM</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:02.0286956</span>
-                                </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Try to click element</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element value before changing:</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element value after changing: test.task.zel</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Try to click element NEXT</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:58 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Try to click element</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element value before changing:</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element value after changing: Test1234Inv</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: passwordNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: passwordNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Try to click element NEXT</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Finding element By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 1:59:59 PM</td>
-                                                        <td class='step-details'>Element is founded By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:00 PM</td>
-                                                        <td class='step-details'>Finding element By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:00 PM</td>
-                                                        <td class='step-details'>Element is founded By.CssSelector: div[jsname=B34EJ]</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:00 PM</td>
-                                                        <td class='step-details'>User is not authorized with invalid password</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='3'>
-                        <div class='test-heading'>
-                            <span class='test-name'>Authorization With Valid Data</span>
-                            <span class='test-time'>12/1/2017 2:00:07 PM</span>
-                            <span class='test-status right pass'>Pass</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>12/1/2017 2:00:07 PM</span>
-                                    <span class='label end-time'>12/1/2017 2:00:14 PM</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:06.8279278</span>
-                                </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Try to click element</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierId</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Element value before changing:</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Element value after changing: test.task.zel</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: identifierNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: identifierNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Try to click element NEXT</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:07 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Try to click element</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Finding element By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element is founded By.Name: password</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element value before changing:</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element value after changing: Test1234Test</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Finding element By.Id: passwordNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Element is founded By.Id: passwordNext</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:08 PM</td>
-                                                        <td class='step-details'>Try to click element NEXT</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:09 PM</td>
-                                                        <td class='step-details'>Element is clicked</td>
-                                                    </tr>
-                                                    <tr class='log' status='debug'>
-                                                        <td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:09 PM</td>
-                                                        <td class='step-details'>Finding element By.XPath: //div[@jscontroller='DUNnfe']//div[@role='button']</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:14 PM</td>
-                                                        <td class='step-details'>Element is founded By.XPath: //div[@jscontroller='DUNnfe']//div[@role='button']</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>12/1/2017 2:00:14 PM</td>
-                                                        <td class='step-details'>User successfully authorized</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
+                                            
+                                        </div>
+                                            <ul class='steps'>
+                                                    <li test-id='3' class='node given pass' status='given pass'>
+                                                        <b>Given</b>
+                                                        I have opened Gmail on Login Page
+                                                                                                                                                                            <div class='pre'>pass</div>
+                                                    </li>
+                                                    <li test-id='4' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        I enter test.invalid.zel in Login Field
+                                                                                                                                                                            <div class='pre'>pass</div>
+                                                    </li>
+                                                    <li test-id='5' class='node when pass' status='when pass'>
+                                                        <b>When</b>
+                                                        I submit Login
+                                                                                                                                                                            <div class='pre'>pass</div>
+                                                    </li>
+                                                    <li test-id='6' class='node then pass' status='then pass'>
+                                                        <b>Then</b>
+                                                        Authorization is unsucceed, because Login in invalid
+                                                                                                                                                                            <div class='pre'>pass</div>
+                                                    </li>
+                                            </ul>
                                     </div>
 
                         </div>
@@ -674,16 +220,6 @@
         <div class='view-summary'>
             <h5 class='test-name'></h5>
 
-            <div id='step-filters' class="right">
-                <span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
-                <span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
-                <span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
-                <span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
-                <span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
-                <span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
-                <span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
-                <span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
-            </div>
         </div>
     </div>
     <!-- subview right -->
@@ -739,30 +275,36 @@
         <div class='row'>
             <div class='col s2'>
                 <div class='card-panel r'>
- <span>Tests</span>                     <div class='panel-lead'>3</div>
+ <span>Features</span>                     <div class='panel-lead'>1</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
- <span>Steps</span>                     <div class='panel-lead'>39</div>
+ <span>Scenarios</span>                     <div class='panel-lead'>1</div>
                 </div>
             </div>
+                <div class='col s2'>
+                    <div class='card-panel r'>
+                        Steps
+                        <div class='panel-lead'>4</div>
+                    </div>
+                </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Start
-                    <div class='panel-lead'>12/1/2017 1:59:44 PM</div>
+                    <div class='panel-lead'>12/1/2017 5:09:37 PM</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     End
-                    <div class='panel-lead'>12/1/2017 2:00:16 PM</div>
+                    <div class='panel-lead'>12/1/2017 5:09:47 PM</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Time Taken
-                    <div class='panel-lead'>00:00:31.9806704</div>
+                    <div class='panel-lead'>00:00:10.0965219</div>
                 </div>
             </div>
 
@@ -797,22 +339,22 @@
 
 		<script>
 			var statusGroup = {
-			    passParent: 3,
+			    passParent: 1,
 			    failParent: 0,
 			    fatalParent: 0,
 			    errorParent: 0,
 			    warningParent: 0,
 			    skipParent: 0,
 				
-			    passChild: 3,
+			    passChild: 1,
 			    failChild: 0,
 			    fatalChild: 0,
 			    errorChild: 0,
 			    warningChild: 0,
 			    skipChild: 0,
-			    infoChild: 36,
+			    infoChild: 0,
 				
-			    passGrandChild: 0,
+			    passGrandChild: 4,
 			    failGrandChild: 0,
 			    fatalGrandChild: 0,
 			    errorGrandChild: 0,

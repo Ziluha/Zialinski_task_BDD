@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using System.Configuration;
 using Zialinski_task.DriverSettings;
 using Zialinski_task.Enums;
@@ -13,13 +12,6 @@ namespace Zialinski_task.TestSettings
         public static IWebDriver Driver { get; set; }
         public static Browser.Name BrowserName;
         public static string TestName;
-
-        /*public BaseTest(Browser.Name browserName, string testName)
-        {
-            BrowserName = browserName;
-            BrowserFactory = BrowserFactory.GetInstance();
-            TestName = testName;
-        }*/
 
         private static void ChooseDriverInstance(Browser.Name browserName)
         {

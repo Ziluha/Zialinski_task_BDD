@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using TechTalk.SpecFlow;
 using Zialinski_task.Enums;
@@ -18,7 +15,6 @@ namespace Zialinski_task.SpecFlowHooks
         {
             BaseTest.TestName = FeatureContext.Current.FeatureInfo.Title;
             BaseTest.InitReport();
-            BaseReport.Test = BaseReport.Extent.CreateTest<Feature>(FeatureContext.Current.FeatureInfo.Title);
         }
 
         [BeforeScenario]
@@ -26,13 +22,16 @@ namespace Zialinski_task.SpecFlowHooks
         {
             BaseTest.BrowserName = Browser.Name.Chrome;
             BaseTest.Init();
+            BaseReport.Test = BaseReport.Extent.CreateTest<Feature>(ScenarioContext.Current.ScenarioInfo.Title);
             BaseReport.Scenario = BaseReport.Test.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
         }
 
-        [BeforeStep]
-        public void AfterStep()
+        [AfterStep]
+        public static void AfterStep()
         {
-            BaseReport.Scenario.CreateNode<Scenario>(ScenarioStepContext.Current.StepInfo.Text).Pass("pass");
+            BaseReport.Scenario.CreateNode(new GherkinKeyword(
+                ScenarioStepContext.Current.StepInfo.StepDefinitionType.ToString()), 
+                ScenarioStepContext.Current.StepInfo.Text).Pass("pass");
         }
 
         [AfterScenario]
