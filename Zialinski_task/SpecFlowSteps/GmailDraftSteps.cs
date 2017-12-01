@@ -88,7 +88,5 @@ namespace Zialinski_task.SpecFlowSteps
         public void ThenDraftSuccessfullyDeleted()
         {
         }
-
-
     }
 }
