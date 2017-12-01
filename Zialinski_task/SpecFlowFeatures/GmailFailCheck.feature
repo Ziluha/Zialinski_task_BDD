@@ -3,7 +3,7 @@
 
 Scenario Outline: Fail Check
 	Given I have opened Gmail on Login Page
-	When I enter <InvalidLogin> 
+	When I enter <InvalidLogin> in Login Field
 	And I submit Login
 	Then Authorization is unsucceed, but fails
 	

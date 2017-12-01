@@ -8,12 +8,6 @@ namespace Zialinski_task.SpecFlowSteps
     [Binding]
     public sealed class GmailFailSteps
     {
-        [When(@"I enter (.*)")]
-        public void WhenIEnter(string login)
-        {
-            
-        }
-
         [Then(@"Authorization is unsucceed, but fails")]
         public void ThenAuthorizationIsUnsucceedButFails()
         {
