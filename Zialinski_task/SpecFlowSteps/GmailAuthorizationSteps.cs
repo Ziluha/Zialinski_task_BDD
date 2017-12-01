@@ -21,7 +21,7 @@ namespace Zialinski_task.SpecFlowSteps
         [Given(@"I have opened Gmail on Login Page")]
         public void GivenIHaveOpenedGmailOnLoginPage()
         {
-            BaseReport.Test = BaseReport.Extent.CreateTest("Authorization With Valid Data");
+            BaseReport.Test = BaseReport.Extent.CreateTest(ScenarioContext.Current.ScenarioInfo.Title);
             Console.WriteLine("App is opened");
         }
 
@@ -34,7 +34,6 @@ namespace Zialinski_task.SpecFlowSteps
         [When(@"I submit Login")]
         public void WhenISubmitLogin()
         {
-
             Page.GmailLogin.SubmitLogin();
         }
 
@@ -44,9 +43,10 @@ namespace Zialinski_task.SpecFlowSteps
             Console.WriteLine("Opened");
         }
 
-        [When(@"I have entered '(.*)' in Password Field")]
-        public void WhenIHaveEnteredInPasswordField(string password)
+        [When(@"I enter '(.*)' in Password Field")]
+        public void WhenIEnterTestTestInPasswordField(string password)
         {
+
             Page.GmailPassword.InputPassword(password, BaseTest.Driver);
         }
 
@@ -63,5 +63,24 @@ namespace Zialinski_task.SpecFlowSteps
             Assert.True(Page.GmailInbox.IsLoginSucceed(BaseTest.Driver), "User was not logged in");
             BaseReport.Test.Pass("User successfully authorized");
         }
+        [Then(@"Authorization is unsucceed, because Login in invalid")]
+        public void ThenAuthorizationIsUnsucceedBecauseLoginInInvalid()
+        {
+            Console.WriteLine("Auth unsucceed");
+            Assert.True(Page.GmailLogin.IsLoginErrorLabelPresented(BaseTest.Driver), 
+                "Login Error Lable is not presented");
+            BaseReport.Test.Pass("User is not authorized with invalid login");
+        }
+        
+        [Then(@"Authorization is unsucceed, because Password is invalid")]
+        public void ThenAuthorizationIsUnsucceedBecausePasswordIsInvalid()
+        {
+            Console.WriteLine("Auth unsucceed");
+            Assert.True(Page.GmailPassword.IsPasswordErrorLabelPresented(BaseTest.Driver),
+                "Password Error Lable is not presented");
+            BaseReport.Test.Pass("User is not authorized with invalid password");
+        }
+
+
     }
 }

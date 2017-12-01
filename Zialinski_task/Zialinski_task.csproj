@@ -84,10 +84,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GmailAuthorization.feature</DependentUpon>
     </Compile>
+    <Compile Include="SpecFlowFeatures\GmailDraft.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GmailDraft.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SpecFlowFeatures\GmailFailCheck.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GmailFailCheck.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SpecFlowHooks\GmailFailSteps.cs" />
     <Compile Include="SpecFlowHooks\TestFixture.cs" />
     <Compile Include="SpecFlowSteps\GmailAuthorizationSteps.cs" />
-    <Compile Include="TestCases\GmailDraftTest.cs" />
-    <Compile Include="TestCases\GmailAuthorizationTest.cs" />
+    <Compile Include="SpecFlowSteps\GmailDraftSteps.cs" />
     <Compile Include="TestCases\GmailFailCheckTest.cs" />
     <Compile Include="TestSettings\BaseTest.cs" />
     <Compile Include="WrapperFactory\BrowserFactory.cs" />
@@ -103,6 +113,14 @@
     <None Include="SpecFlowFeatures\GmailAuthorization.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GmailAuthorization.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SpecFlowFeatures\GmailDraft.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GmailDraft.feature.cs</LastGenOutput>
+    </None>
+    <None Include="SpecFlowFeatures\GmailFailCheck.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GmailFailCheck.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
