@@ -1,9 +1,11 @@
-﻿using NUnit.Framework;
+﻿using AventStack.ExtentReports.Gherkin.Model;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 using Zialinski_task.PageObjects;
+using Zialinski_task.ReportSettings;
 using Zialinski_task.TestSettings;
 
-namespace Zialinski_task.SpecFlowHooks
+namespace Zialinski_task.SpecFlowSteps
 {
     [Binding]
     public sealed class GmailFailSteps

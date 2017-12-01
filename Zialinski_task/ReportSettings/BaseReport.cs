@@ -1,6 +1,8 @@
 ﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
+using TechTalk.SpecFlow;
 using Zialinski_task.Pathes;
 using Zialinski_task.WrapperFactory;
 
@@ -10,6 +12,7 @@ namespace Zialinski_task.ReportSettings
     {
         public static ExtentReports Extent;
         public static ExtentTest Test;
+        public static ExtentTest Scenario;
         private static ExtentHtmlReporter _htmlReporter;
         
         public static void StartReport(string testName)
@@ -28,20 +31,20 @@ namespace Zialinski_task.ReportSettings
             Extent.AddSystemInfo("By", "Zialinski Ivan");
         }
         
-         public static void GetResult(string testName)
-         {
-             var status = TestContext.CurrentContext.Result.Outcome.Status;
-             var stackTrace = "<pre>" + TestContext.CurrentContext.Result.StackTrace + "</pre>";
-             var errorMessage = TestContext.CurrentContext.Result.Message;
+        public static void GetResult(string testName)
+        {
+            var status = TestContext.CurrentContext.Result.Outcome.Status;
+            var stackTrace = "<pre>" + TestContext.CurrentContext.Result.StackTrace + "</pre>";
+            var errorMessage = TestContext.CurrentContext.Result.Message;
 
-             if (status == NUnit.Framework.Interfaces.TestStatus.Failed)
-             {
-                 string screenshotPath = GetScreenshot.Capture(BrowserFactory.Driver, testName);
-                 Test.Log(Status.Fail, stackTrace + errorMessage);
-                 Test.Log(Status.Fail, "Snapshot below: " + Test.AddScreenCaptureFromPath(screenshotPath));
+            if (status == NUnit.Framework.Interfaces.TestStatus.Failed)
+            {
+                string screenshotPath = GetScreenshot.Capture(BrowserFactory.Driver, testName);
+                Scenario.CreateNode<Then>(errorMessage).Fail("fail");
+                Test.CreateNode<And>("Snapshot below: " + Test.AddScreenCaptureFromPath(screenshotPath)).Fail("fail");
             }
-             Test = null;
-         }
+            Test = null;
+        }
         
         public static void StopReport()
         {

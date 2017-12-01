@@ -1,5 +1,6 @@
 ﻿using AventStack.ExtentReports;
 using OpenQA.Selenium.Support.Events;
+using TechTalk.SpecFlow;
 using Zialinski_task.ReportSettings;
 
 namespace Zialinski_task.Listener

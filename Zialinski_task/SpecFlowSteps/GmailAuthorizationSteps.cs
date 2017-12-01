@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Text;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
 using MongoDB.Driver.Core.Events;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
@@ -18,10 +20,9 @@ namespace Zialinski_task.SpecFlowSteps
     [Binding]
     public sealed class GmailAuthorizationSteps
     {
-        [Given(@"I have opened Gmail on Login Page")]
+           [Given(@"I have opened Gmail on Login Page")]
         public void GivenIHaveOpenedGmailOnLoginPage()
         {
-            BaseReport.Test = BaseReport.Extent.CreateTest(ScenarioContext.Current.ScenarioInfo.Title);
             Console.WriteLine("App is opened");
         }
 
